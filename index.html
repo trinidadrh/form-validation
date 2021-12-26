@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+</head>
+<body>
+  <form novalidate>
+    <div>
+      <label for="mail">
+        <span>Email:</span>
+        <input type="email" id="mail" name="mail" required minlength="8">
+        <span class="error" aria-live="polite"></span>
+      </label>
+    </div>
+    <div>
+      <label for="country">
+        <span>Country:</span>
+        <input type="text" id="country" name="country" required minlength="3" maxlength="25">
+        <span class="error" area-live="polite"></span>
+      </label>
+    </div>
+    <div>
+      <label for="zip">
+        <span>Zip Code (numbers only):</span>
+        <input type="number" id="zip" name="zip" required min="10000" max="999999999999" step="1">
+        <span class="error" aria-live="polite"></span>
+      </label>
+    </div>
+    <div>
+      <label for="pass">
+        <span>Password (letters and numbers only, 8 characters minimum)</span>
+        <input type="password" id="pass" name="password" minlength="8" required>
+        <span class="error" aria-live="polite"></span>
+      </label>
+    </div>
+    <div>
+      <label for="confirm">
+        <span>Confirm Password</span>
+        <input type="password" id="confirm" name="confirm" required>
+        <span class="error" aria-live="polite"></span>
+      </label>
+    </div>
+    <button>Submit</button>
+
+    <script src='script.js'></script>
+  </form>
+</body>
+</html>
